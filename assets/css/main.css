@@ -2428,7 +2428,7 @@
 
 			.features li:before {
 				display: block;
-				color: #00ffcc;
+				color: ##ffffff;
 				position: absolute;
 				left: 1.75em;
 				top: 2.75em;
@@ -3172,7 +3172,7 @@
 		width: 20em;
 		z-index: 10002;
 		opacity:0.9;
-		
+
 	}
 
 		#menu ul {
@@ -3631,10 +3631,10 @@
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(255,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -webkit-linear-gradient(top, rgba(0,255,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -ms-linear-gradient(top, rgba(0,0,255,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: linear-gradient(top, rgba(255,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
