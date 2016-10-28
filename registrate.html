@@ -10,7 +10,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- Latest compiled and minified CSS -->
+
+<!-- Optional theme -->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 	</head>
@@ -53,23 +58,34 @@
 										<div class="box">
 
 									<h4>Registrate</h4>
-									<form method="post" action="#">
+									<form method="post" onSubmit="return validarPasswd()" action="#">
 
 										<div class="row uniform">
 											<div class="12u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Name" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Apellidos" />
+												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Apellidos" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Nombre de Usuario" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="password" name="demo-name" id="demo-name" value="" placeholder="Password" />
+												<input type="text" name="number" id="number" value=""  placeholder="Telefono" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="password" name="demo-name" id="demo-name" value="" placeholder="Password" />
+												<div style="position: relative">
+												   <input type='text' id='datetimepicker9'  placeholder="Fecha de Nacimiento" />
+													 </div>
+											</div>
+											<div class="12u 12u$(xsmall)">
+												<input type="email" name="demo-email" id="demo-email"  value="" placeholder="Email" />
+											</div>
+											<div class="12u 12u$(xsmall)">
+												<input type="password" name="passwd" id="passwd"  value="" placeholder="Password" />
+											</div>
+											<div class="12u 12u$(xsmall)">
+												<input type="password" name="passwd2" id="passwd2" required value="" placeholder="Password" />
 											</div>
 
 
@@ -78,7 +94,7 @@
 
 											<div class="12u$">
 												<ul class="actions">
-													<li ><input type="submit" value="Registrate" class="special" /></li>
+													<li ><input type="submit" value="Registrate" class="special" onClick="comprobarClave()" /></li>
 
 												</ul>
 											</div>
@@ -110,13 +126,57 @@
 			</div>
 
 		<!-- Scripts -->
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
+			<!-- Latest compiled and minified JavaScript -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script type="text/javascript">
+        $(function () {
+            $('#datetimepicker9').datetimepicker({
+                viewMode: 'years',
+                format: 'DD/MM/YYYY'
+            });
+        });
+
+
+    </script>
+		<script type="text/javascript">
+		function validarPasswd() {
+
+
+		var p1 = document.getElementById("passwd").value;
+		var p2 = document.getElementById("passwd2").value;
+		var espacios = false;
+				var cont = 0;
+
+				while (!espacios && (cont < p1.length)) {
+				  if (p1.charAt(cont) == " ")
+				    espacios = true;
+				  cont++;
+				}
+
+				if (espacios) {
+				  alert ("La contraseña no puede contener espacios en blanco");
+				  return false;
+				}
+				if (p1 != p2) {
+				  alert("Las passwords deben de coincidir");
+				  return false;
+				} else {
+				  alert("Todo esta correcto");
+				  return true;
+				}
+			}
+		</script>
 
 	</body>
 </html>
