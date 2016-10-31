@@ -62,7 +62,7 @@
 					offset: $header.outerHeight()
 				});
 
-		// Menu.
+		// Menú.
 			$('#menu')
 				.append('<a href="#menu" class="close"></a>')
 				.appendTo($body)

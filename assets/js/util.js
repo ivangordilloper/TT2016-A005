@@ -363,7 +363,7 @@
 
 				});
 
-		// Password.
+		// Contraseña.
 			$this.find('input[type=password]')
 				.each(function() {
 

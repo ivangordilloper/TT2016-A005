@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Registrate</title>
+		<title>Regístrate</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -29,12 +29,15 @@
 							<h1><a href="index.html">BooksCom</a></h1>
 							<nav id="nav">
 								<ul>
+										<li class="special">
+											<img src="images/profile.png" style = "height: 31px;  width: auto; margin-bottom: -9px;"/>
+										</li>
 									<li class="special">
-										<a href="#menu" class="menuToggle"><span>Menu</span></a>
+										<a href="#menu" class="menuToggle"><span>Menú</span></a>
 										<div id="menu">
 											<ul>
 												<li><a href="index.html">Inicio</a></li>
-												<li><a href="registrate.html">Registrate</a></li>
+												<li><a href="registrate.html">Regístrate</a></li>
 												<li><a href="login.html">Iniciar Sesión </a></li>
 												<li><a href="Contacto.html">Contacto</a></li>
 												<li><a href="nosotros.html">Nosotros</a></li>
@@ -49,7 +52,7 @@
 				<!-- Main -->
 					<article id="main">
 						<header>
-							<h2>Registrate</h2>
+							<h2>Regístrate</h2>
 						</header>
 						<section class="wrapper style5">
 							<div class="inner">
@@ -58,21 +61,24 @@
 								<section>
 										<div class="box">
 
-									<h4>Registrate</h4>
+									<h4>Regístrate</h4>
 									<form method="post" onSubmit="return validarPasswd()" action="#">
 
 										<div class="row uniform">
 											<div class="12u 12u$(xsmall)">
 												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Nombre(s)" />
 											</div>
-											<div class="12u 12u$(xsmall)">
-												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Apellidos" />
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Apellido Paterno" />
+											</div>
+											<div class="6u 12u$(xsmall)">
+												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Apellido Materno" />
 											</div>
 											<div class="12u 12u$(xsmall)">
 												<input type="text" name="demo-name" id="demo-name" value=""  placeholder="Nombre de Usuario" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="text" name="number" id="number" value=""  placeholder="Telefono" />
+												<input type="text" name="number" id="number" value=""  placeholder="Teléfono" />
 											</div>
 											<div class="12u 12u$(xsmall)">
 												<div style="position: relative">
@@ -80,13 +86,16 @@
 													 </div>
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="email" name="demo-email" id="demo-email"  value="" placeholder="Email" />
+												<input type="email" name="demo-email" id="email" required value="" placeholder="Correo Electrónico" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="password" name="passwd" id="passwd"  value="" placeholder="Password" />
+												<input type="email" name="demo-email" id="email2" required value="" placeholder="Confirma Correo Electrónico" />
 											</div>
 											<div class="12u 12u$(xsmall)">
-												<input type="password" name="passwd2" id="passwd2" required value="" placeholder="Password" />
+												<input type="password" name="passwd" id="passwd" required value="" placeholder="Contraseña" />
+											</div>
+											<div class="12u 12u$(xsmall)">
+												<input type="password" name="passwd2" id="passwd2" required value="" placeholder="Confirma Contraseña" />
 											</div>
 
                       <div class="6u 1u$(xsmall) g-recaptcha" data-sitekey="6Ld4sQoUAAAAAPZzWmOrDXOoHKsY64Hdf7a8rsHS"></div>
@@ -98,7 +107,7 @@
 
 											<div class="12u$">
 												<ul class="actions">
-													<li ><input type="submit" value="Registrate" class="special" onClick="comprobarClave()" /></li>
+													<li ><input type="submit" value="Regístrate" class="special" onClick="validarPasswd()" /></li>
 
 												</ul>
 											</div>
@@ -120,7 +129,7 @@
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="#" class="icon fa-envelope-o"><span class="label">Correo Electrónico</span></a></li>
 						</ul>
 						<ul class="copyright">
 
@@ -159,6 +168,8 @@
 
 		var p1 = document.getElementById("passwd").value;
 		var p2 = document.getElementById("passwd2").value;
+		var p3 = document.getElementById("email").value;
+		var p4 = document.getElementById("email2").value;
 		var espacios = false;
 				var cont = 0;
 
@@ -173,14 +184,23 @@
 				  return false;
 				}
 				if (p1 != p2) {
-				  alert("Las passwords deben de coincidir");
+				  alert("Las contraseñas deben de coincidir");
 				  return false;
+				}
+
+				if (p3 != p4) {
+				  alert("Los correos electrónicos deben de coincidir");
+				  return false;
+
 				} else {
 				  alert("Todo esta correcto");
 				  return true;
 				}
+
+
 			}
 		</script>
+
 
 	</body>
 </html>
