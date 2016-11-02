@@ -29,17 +29,15 @@
 						<h1><a href="index.html">BooksCom</a></h1>
 						<nav id="nav">
 							<ul>
+
 								<li class="special">
-									<img src="images/profile.png" style = "height: 31px;  width: auto; margin-bottom: -9px;"/>
-								</li>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menú</span></a>
+									<a href="#menu" class="menuToggle"><img src="images/profile.png" class = "image-profile"/><span>Usuario</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Inicio</a></li>
-
-											<li><a href="Contacto.html">Contacto</a></li>
-											<li><a href="nosotros.html">Nosotros</a></li>
+											<li><a href="usuario.html">Inicio</a></li>
+											<li><a href="listas.html">Ver Listas</a></li>
+											<li><a href="config_user.html">Configuración</a></li>
+											<li><a href="index.html">Cerrar Sesión</a></li>
 
 										</ul>
 									</div>
@@ -53,24 +51,23 @@
 						<header>
 							<h2>Bienvenido Usuario</h2>
 						</header>
-						<section class="wrapper style5">
-							<div class="inner">
 
 
-								<section>
+										<section class="spotlight">
+														<div class="image"><img src="images/choose.jpg" alt="" /></div><div class="content">
                     <div class="swiper-container">
                       <!-- Additional required wrapper -->
                       <div class="swiper-wrapper">
                           <!-- Slides -->
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 1<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 2<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 3<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 4<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 5<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 6<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 7<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 8<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
-                          <div class="swiper-slide"><a href="resetpass.html" class='link1'>+</a><br/>Libro 9<br/><img src="images/profile.png" style = "height: 31px;  width: auto; margin-left: 10px;"/></div>
+                          <div class="swiper-slide"><a href="#" class='link1'><b>Añadir +</b></a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 1</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 2</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 3</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 4</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 5</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 6</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 7</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 8</div>
+                          <div class="swiper-slide"><a href="#" class='link1'>Añadir +</a><br/><img src="images/book.png" class="image-slide"/><br/>Libro 9</div>
                           ...
                       </div>
                       <!-- If we need pagination -->
@@ -81,11 +78,19 @@
 
                       <!-- If we need scrollbar -->
                     </div>
-
+									</div>
 								</section>
 
 
+
+							<section class="spotlight">
+								<div class="image"><img src="images/libros4.png" alt="" /></div><div class="content">
+									<h2>Diviertete eligiendo tus libros favoritos
+								</h2>
+									
+								</div>
 							</section>
+
 					</article>
 
 				<!-- Footer -->
@@ -118,14 +123,15 @@
          //initialize swiper when document ready
          var mySwiper = new Swiper ('.swiper-container', {
            // Optional parameters
-           direction: 'horizontal',
-           slidesPerView: 3,
-        paginationClickable: true,
-        spaceBetween: 30,
+          direction: 'horizontal',
+          slidesPerView: 3,
+        	paginationClickable: true,
+        	spaceBetween: 30,
            // Navigation arrows
-  nextButton: '.swiper-button-next',
-  prevButton: '.swiper-button-prev',
-           loop: true
+  			 	nextButton: '.swiper-button-next',
+  		 		prevButton: '.swiper-button-prev',
+          loop: true,
+					keyboardControl: true,
          })
        });
  </script>
