@@ -1,4 +1,4 @@
-.swiper-slide, .swiper-slide-duplicate, .swiper-slide-active{
+  .swiper-slide, .swiper-slide-duplicate, .swiper-slide-active{
 
   margin-left: 20px!important;
   height: 100%!important
@@ -51,10 +51,10 @@ position: absolute;
 .swiper-slide, .swiper-slide-duplicate, .swiper-slide-active{
 
   margin-left: 20px!important;
-  height: 100px!important;
+  height: 350px!important;
 }
 .swiper-container{
-  height: 100px;
+  height: 250px;
 }
 }
 #texto{
