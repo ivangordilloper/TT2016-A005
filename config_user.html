@@ -48,7 +48,7 @@
 								</ul>
 							</nav>
 						</header>
-submit
+
 				<!-- Main -->
 					<article id="main">
 						<header>
@@ -83,7 +83,16 @@ submit
 												   <input type='text' id='datetimepicker9'  placeholder="Fecha de Nacimiento" />
 													 </div>
 											</div>
+											<div class="12u">
+												<div class="select-wrapper">
+													<select name="demo-category" id="demo-category">
+														<option value="">- Sexo -</option>
+														<option value="M">Masculino</option>
+														<option value="F">Femenino</option>
 
+													</select>
+												</div>
+											</div>
 											<div class="12u 12u$(xsmall)">
 												<input type="password" name="passwd" id="passwd" required value="" placeholder="Nueva contraseña" />
 											</div>
@@ -110,6 +119,7 @@ submit
 							</div>
 
 								</section>
+								<div id="fb-root">		<div class="fb-login-button" data-max-rows="10" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div> </div>
 
 
 							</section>
@@ -132,6 +142,7 @@ submit
 			</div>
 
 		<!-- Scripts -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
@@ -187,8 +198,25 @@ submit
 
 
 			}
-		</script>
 
+		</script>
+		<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1246188562111122',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 	</body>
 </html>
